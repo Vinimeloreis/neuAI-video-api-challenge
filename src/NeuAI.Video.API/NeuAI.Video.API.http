@@ -1,0 +1,10 @@
+GET http://localhost:5187/api/video
+
+###
+POST http://localhost:5187/api/video
+Content-Type: application/json
+
+{
+    "id": "video-001",
+    "url": "https://youtube.com/xxxx"
+}
