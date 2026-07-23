@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 
 [ApiController]
 [Route("api/[controller]")]
-public class VideoController : ControllerBase
+public class CacheController : ControllerBase
 {
     [HttpPost]
     public IActionResult CreateVideo([FromBody]VideoRequest request)
@@ -13,6 +13,6 @@ public class VideoController : ControllerBase
     [HttpGet("{id}")]
     public IActionResult GetVideo(string id)
     {
-        return Ok();
+        return Ok(id);
     }
 }
