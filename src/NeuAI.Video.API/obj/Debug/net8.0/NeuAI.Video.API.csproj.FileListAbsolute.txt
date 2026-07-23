@@ -1,0 +1,8 @@
+/home/vinicius-melo/Projects/ASP.NET/NeuAI/src/NeuAI.Video.API/obj/Debug/net8.0/rpswa.dswa.cache.json
+/home/vinicius-melo/Projects/ASP.NET/NeuAI/src/NeuAI.Video.API/obj/Debug/net8.0/NeuAI.Video.API.GeneratedMSBuildEditorConfig.editorconfig
+/home/vinicius-melo/Projects/ASP.NET/NeuAI/src/NeuAI.Video.API/obj/Debug/net8.0/NeuAI.Video.API.AssemblyInfoInputs.cache
+/home/vinicius-melo/Projects/ASP.NET/NeuAI/src/NeuAI.Video.API/obj/Debug/net8.0/NeuAI.Video.API.AssemblyInfo.cs
+/home/vinicius-melo/Projects/ASP.NET/NeuAI/src/NeuAI.Video.API/obj/Debug/net8.0/NeuAI.Video.API.csproj.CoreCompileInputs.cache
+/home/vinicius-melo/Projects/ASP.NET/NeuAI/src/NeuAI.Video.API/obj/Debug/net8.0/NeuAI.Video.API.MvcApplicationPartsAssemblyInfo.cache
+/home/vinicius-melo/Projects/ASP.NET/NeuAI/src/NeuAI.Video.API/obj/Debug/net8.0/NeuAI.Video.API.csproj.AssemblyReference.cache
+/home/vinicius-melo/Projects/ASP.NET/NeuAI/src/NeuAI.Video.API/obj/Debug/net8.0/NeuAI.Video.API.MvcApplicationPartsAssemblyInfo.cs

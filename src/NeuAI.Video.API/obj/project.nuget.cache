@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "JqI7FPsw1/U=",
+  "success": true,
+  "projectFilePath": "/home/vinicius-melo/Projects/ASP.NET/NeuAI/src/NeuAI.Video.API/NeuAI.Video.API.csproj",
+  "expectedPackageFiles": [
+    "/home/vinicius-melo/.nuget/packages/microsoft.aspnetcore.openapi/8.0.29/microsoft.aspnetcore.openapi.8.0.29.nupkg.sha512",
+    "/home/vinicius-melo/.nuget/packages/microsoft.openapi/1.4.3/microsoft.openapi.1.4.3.nupkg.sha512",
+    "/home/vinicius-melo/.nuget/packages/microsoft.netcore.app.host.linux-x64/8.0.29/microsoft.netcore.app.host.linux-x64.8.0.29.nupkg.sha512"
+  ],
+  "logs": []
+}
