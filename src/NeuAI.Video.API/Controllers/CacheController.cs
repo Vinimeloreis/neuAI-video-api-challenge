@@ -21,14 +21,13 @@ public class CacheController : ControllerBase
        
         try
         {
-            var sequence = await _db.StringIncrementAsync("video:sequence");
-            var id = $"video-{sequence:D3}";
-            var createdVideo = await _db.StringSetAsync(id, request.Url);
+            var createdVideo = await _db.StringSetAsync(request.Id, request.Url);
             if(!createdVideo) return StatusCode(500, "Erro ao salvar vídeo no cache");
             return Ok(new
             {
                 status = "Criado com sucesso",
-                id = id,
+                id = request.Id,
+                Url = request.Url
             });
         }
         catch (System.Exception)

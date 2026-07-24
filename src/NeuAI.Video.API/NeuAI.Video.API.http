@@ -1,9 +1,10 @@
-GET http://localhost:5187/api/cache/video-001
+GET http://localhost:5187/api/cache/video-002
 
 ###
 POST http://localhost:5187/api/cache
 Content-Type: application/json
 
 {
-    "url": "https://youtube.com/xxxx"
+    "id": "video-002",
+    "url": "https://youtube.com/xxxxtest"
 }

@@ -1,4 +1,18 @@
 services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: neuai-video-api:latest
+    container_name: neuai-video-api
+    environment:
+      - ASPNETCORE_URLS=http://+:5187
+      - ConnectionStrings__Redis=redis:6379
+    ports:
+      - "5187:5187"
+    depends_on:
+      - redis
+
   redis:
     image: redis:latest
     container_name: neuai-redis
