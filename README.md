@@ -5,15 +5,25 @@
 A solução deverá estar publicada na AWS, com a comunicação entre a API e o Redis ocorrendo na infraestrutura em nuvem.
 
 ## Descrição
-O projeto consiste em uma API relativamente simples com duas funções CRUD, GET(id) e POST desenvolvido usando ASP .NET 8.0, o sistema possui integração
-com a Stack do Redis para persistência de dados e componentização/containerização utilizando docker. A aplicação segue a arquitetura Domain Driven Design
-(DDD) afim de separar as responsabilidades dos arquivos baseado no estudo de camadas da arquitetura estabelecida.
+O projeto consiste em uma API REST desenvolvida em ASP.NET 8, com duas operações principais: POST e GET por ID. A aplicação utiliza o Redis, por meio da biblioteca StackExchange.Redis, para persistência dos dados e é totalmente containerizada com Docker, facilitando sua execução.
+
+A solução foi estruturada seguindo os princípios de Domain-Driven Design (DDD), organizando o código em camadas para promover a separação de responsabilidades, facilitar a manutenção e melhorar a escalabilidade da aplicação.
 
 ## Tecnologias usadas
-ASP .NET 8.0 para backend, Redis para integração com o Database, Docker para containerização da aplicação e biblioteca ''commitizen'' para padronizar os commits de forma interativa
+ASP .NET 8.0 para backend, Redis para integração com o Database, Docker para containerização da aplicação e biblioteca ''commitizen'' para padronizar os commits de forma interativa,
 seguindo os padrões dos conventional commits.
-## Arquiterura
 
+## Arquiterura/estrutura do projeto
+```text
+├── Dockerfile
+├── docker-compose.yml
+├── NeuAI.VideoURL.sln
+└── src
+    ├── NeuAI.Video.API
+    ├── NeuAI.Video.Application
+    ├── NeuAI.Video.Domain
+    └── NeuAI.Video.Infrastructure
+```
 
 ## Requisitos / Checklist
 - [x] Backend C#
