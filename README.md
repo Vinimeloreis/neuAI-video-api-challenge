@@ -157,3 +157,7 @@ ConnectionStrings__Redis=redis:6379
 - [x] Clean Architecture simplificada inspirada em DDD (Domain-Driven Design)
 
 > Endpoint público da VM: http://54.207.171.67:5187
+> 
+> Exemplo de requisição GET:
+> 
+> http://54.207.171.67:5187/api/cache/video-001
