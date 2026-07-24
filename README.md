@@ -155,3 +155,5 @@ ConnectionStrings__Redis=redis:6379
 - [ ] Integração com AWS
 - [ ] URL pública da API hospedada na AWS
 - [x] Clean Architecture simplificada inspirada em DDD (Domain-Driven Design)
+
+> Endpoint público da VM: http://54.207.171.67:5187
