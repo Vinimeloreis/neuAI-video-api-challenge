@@ -1,5 +1,5 @@
-name: learn-github-actions
-run-name: ${{ github.actor }} is learning GitHub Actions
+name: Deploy API
+run-name: Deploy API on EC2 VM
 on: [push]
 jobs:
   deploy-on-vm:
