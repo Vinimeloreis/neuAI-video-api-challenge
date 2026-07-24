@@ -183,7 +183,7 @@ ConnectionStrings__Redis=redis:6379
 - [x] Uso de variáveis de ambiente
 - [x] Github Actions
 - [ ] Testes unitários
-- [ ] Tratamento global de exceções
+- [x] Tratamento global de exceções
 - [x] Uso de health checks
 
 > Endpoint público da VM: http://54.207.171.67:5187

@@ -15,45 +15,31 @@ public class CacheController : ControllerBase
     [HttpPost]
     public async Task<IActionResult> CreateVideo([FromBody] VideoRequest request)
     {
-        try
-        {
-            var createdVideo = await _service.CreateAsync(request.Id, request.Url);
+        var createdVideo = await _service.CreateAsync(request.Id, request.Url);
 
-            if (!createdVideo)
-                return StatusCode(500, "Erro ao salvar vídeo no cache");
+        if (!createdVideo)
+            return StatusCode(500, "Erro ao salvar vídeo no cache");
 
-            return Ok(new
-            {
-                status = "Criado com sucesso",
-                id = request.Id,
-                url = request.Url
-            });
-        }
-        catch (Exception)
+        return Ok(new
         {
-            return StatusCode(500, "Erro de conexão ao salvar, tente novamente");
-        }
+            status = "Criado com sucesso",
+            id = request.Id,
+            url = request.Url
+        });
     }
 
     [HttpGet("{id}")]
     public async Task<IActionResult> GetVideo(string id)
     {
-        try
-        {
-            var video = await _service.GetByIdAsync(id);
+        var video = await _service.GetByIdAsync(id);
 
-            if (video is null)
-                return NotFound();
+        if (video is null)
+            return NotFound();
 
-            return Ok(new
-            {
-                id = video.Id,
-                url = video.Url
-            });
-        }
-        catch (Exception)
+        return Ok(new
         {
-            return StatusCode(500, "Erro de conexão ao buscar dado");
-        }
+            id = video.Id,
+            url = video.Url
+        });
     }
 }

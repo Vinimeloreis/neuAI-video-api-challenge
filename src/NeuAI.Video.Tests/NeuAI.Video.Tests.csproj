@@ -22,4 +22,9 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\NeuAI.Video.Application\NeuAI.Video.Application.csproj" />
+    <ProjectReference Include="..\NeuAI.Video.Domain\NeuAI.Video.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
