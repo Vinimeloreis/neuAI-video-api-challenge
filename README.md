@@ -13,7 +13,7 @@ A solução foi estruturada seguindo uma Clean Architecture simplificada e inspi
 
 ## Tecnologias usadas
 
-ASP.NET Core 8.0 para backend, Redis para integração com o database, Docker para containerização da aplicação e biblioteca `commitizen` para padronizar os commits de forma interativa, seguindo os padrões dos conventional commits, e um serviço de health mapeado para o endpoint "/health".
+ASP.NET Core 8.0 para backend, Redis para integração com o database, Docker para containerização da aplicação e biblioteca `commitizen` para padronizar os commits de forma interativa, seguindo os padrões dos conventional commits, e health check mapeado no endpoint `/health`.
 
 ## Arquitetura / estrutura do projeto
 
@@ -54,6 +54,8 @@ A API ficará disponível em:
 
 ```text
 http://localhost:5187
+ou
+http://54.207.171.67:5187
 ```
 
 O Docker Compose sobe dois containers:
@@ -77,6 +79,9 @@ Request:
 
 ```http
 POST http://localhost:5187/api/cache
+Content-Type: application/json
+ou
+POST http://54.207.171.67:5187/api/cache
 Content-Type: application/json
 ```
 
@@ -107,6 +112,8 @@ Request:
 
 ```http
 GET http://localhost:5187/api/cache/video-001
+ou
+GET http://54.207.171.67:5187/api/cache/video-001
 ```
 
 Response:
@@ -122,6 +129,24 @@ Caso o registro não exista, a API retorna:
 
 ```text
 HTTP 404 Not Found
+```
+
+### GET /health
+
+Verifica se a API está ativa.
+
+Request:
+
+```http
+GET http://localhost:5187/health
+ou
+GET http://54.207.171.67:5187/health
+```
+
+Response:
+
+```text
+Healthy
 ```
 
 ## Configuração
@@ -156,13 +181,13 @@ ConnectionStrings__Redis=redis:6379
 - [x] URL pública da API hospedada na AWS
 - [x] Clean Architecture simplificada inspirada em DDD (Domain-Driven Design)
 - [x] Uso de variáveis de ambiente
-- [ ] Github Actions
+- [x] Github Actions
 - [ ] Testes unitários
 - [ ] Tratamento global de exceções
-- [ ] Uso de health checks
+- [x] Uso de health checks
 
 > Endpoint público da VM: http://54.207.171.67:5187
-> 
+>
 > Exemplo de requisição GET:
-> 
+>
 > http://54.207.171.67:5187/api/cache/video-001
