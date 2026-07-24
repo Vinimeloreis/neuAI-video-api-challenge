@@ -152,9 +152,14 @@ ConnectionStrings__Redis=redis:6379
 - [x] Aplicação containerizada com Docker
 - [x] Docker Compose
 - [x] Dockerfile
-- [ ] Integração com AWS
-- [ ] URL pública da API hospedada na AWS
+- [x] Integração com AWS
+- [x] URL pública da API hospedada na AWS
 - [x] Clean Architecture simplificada inspirada em DDD (Domain-Driven Design)
+- [x] Uso de variáveis de ambiente
+- [ ] Github Actions
+- [ ] Testes unitários
+- [ ] Tratamento global de exceções
+- [ ] Uso de health checks
 
 > Endpoint público da VM: http://54.207.171.67:5187
 > 
