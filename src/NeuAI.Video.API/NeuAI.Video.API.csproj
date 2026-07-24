@@ -10,4 +10,9 @@
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.29" />
     <PackageReference Include="StackExchange.Redis" Version="3.0.17" />
   </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NeuAI.Video.Application\NeuAI.Video.Application.csproj" />
+    <ProjectReference Include="..\NeuAI.Video.Infrastructure\NeuAI.Video.Infrastructure.csproj" />
+  </ItemGroup>
 </Project>

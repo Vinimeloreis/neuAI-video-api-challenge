@@ -1,8 +1,0 @@
-<Solution>
-  <Folder Name="/src/">
-    <Project Path="src/NeuAI.Video.API/NeuAI.Video.API.csproj" />
-    <Project Path="src/NeuAI.Video.Application/NeuAI.Video.Application.csproj" />
-    <Project Path="src/NeuAI.Video.Domain/NeuAI.Video.Domain.csproj" />
-    <Project Path="src/NeuAI.Video.Infrastructure/NeuAI.Video.Infrastructure.csproj" />
-  </Folder>
-</Solution>

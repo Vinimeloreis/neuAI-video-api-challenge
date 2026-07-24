@@ -1,36 +1,35 @@
 using Microsoft.AspNetCore.Mvc;
-using StackExchange.Redis;
-
+using NeuAI.Video.Application.Services;
 
 [ApiController]
 [Route("api/[controller]")]
 public class CacheController : ControllerBase
 {
-    private readonly IDatabase _db;
-    
-    
+    private readonly VideoCacheService _service;
 
-    public CacheController(IConnectionMultiplexer redis)
+    public CacheController(VideoCacheService service)
     {
-        _db = redis.GetDatabase();
+        _service = service;
     }
 
     [HttpPost]
-    public async Task<IActionResult> CreateVideo([FromBody]VideoRequest request)
+    public async Task<IActionResult> CreateVideo([FromBody] VideoRequest request)
     {
-       
         try
         {
-            var createdVideo = await _db.StringSetAsync(request.Id, request.Url);
-            if(!createdVideo) return StatusCode(500, "Erro ao salvar vídeo no cache");
+            var createdVideo = await _service.CreateAsync(request.Id, request.Url);
+
+            if (!createdVideo)
+                return StatusCode(500, "Erro ao salvar vídeo no cache");
+
             return Ok(new
             {
                 status = "Criado com sucesso",
                 id = request.Id,
-                Url = request.Url
+                url = request.Url
             });
         }
-        catch (System.Exception)
+        catch (Exception)
         {
             return StatusCode(500, "Erro de conexão ao salvar, tente novamente");
         }
@@ -41,16 +40,20 @@ public class CacheController : ControllerBase
     {
         try
         {
-            var value = await _db.StringGetAsync(id);
-            if(value.IsNullOrEmpty) return NotFound();
-            return Ok(new{
-                id = id,
-                Url = value.ToString()
-            }); 
+            var video = await _service.GetByIdAsync(id);
+
+            if (video is null)
+                return NotFound();
+
+            return Ok(new
+            {
+                id = video.Id,
+                url = video.Url
+            });
         }
-        catch (System.Exception)
+        catch (Exception)
         {
-           return StatusCode(500, "Erro de conexão ao buscar dado");
+            return StatusCode(500, "Erro de conexão ao buscar dado");
         }
     }
 }
