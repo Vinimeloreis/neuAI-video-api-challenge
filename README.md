@@ -182,7 +182,7 @@ ConnectionStrings__Redis=redis:6379
 - [x] Clean Architecture simplificada inspirada em DDD (Domain-Driven Design)
 - [x] Uso de variáveis de ambiente
 - [x] Github Actions
-- [ ] Testes unitários
+- [x] Testes unitários
 - [x] Tratamento global de exceções
 - [x] Uso de health checks
 
