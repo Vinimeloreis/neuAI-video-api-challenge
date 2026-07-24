@@ -13,13 +13,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NeuAI.Video.Application", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NeuAI.Video.Infrastructure", "src\NeuAI.Video.Infrastructure\NeuAI.Video.Infrastructure.csproj", "{0536950B-E43E-4A1C-912C-A42198B2796A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NeuAI.Video.Tests", "src\NeuAI.Video.Tests\NeuAI.Video.Tests.csproj", "{83101C84-18CC-46BB-ABB4-564F2E78D042}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{BEB17C63-50B6-4202-BCDD-0B89EC372DDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -38,6 +37,13 @@ Global
 		{0536950B-E43E-4A1C-912C-A42198B2796A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0536950B-E43E-4A1C-912C-A42198B2796A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0536950B-E43E-4A1C-912C-A42198B2796A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83101C84-18CC-46BB-ABB4-564F2E78D042}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83101C84-18CC-46BB-ABB4-564F2E78D042}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83101C84-18CC-46BB-ABB4-564F2E78D042}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83101C84-18CC-46BB-ABB4-564F2E78D042}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{BEB17C63-50B6-4202-BCDD-0B89EC372DDC} = {EEEDD23E-9F97-4638-BC74-8B5123C9D433}
