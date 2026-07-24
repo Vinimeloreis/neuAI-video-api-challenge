@@ -5,7 +5,7 @@ jobs:
   deploy-on-vm:
     runs-on: ubuntu-latest
     steps:
-      - name: Concfigure SSH key
+      - name: Configure SSH key
         env:
           SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
           EC2_HOST: ${{ secrets.EC2_HOST }}
@@ -16,6 +16,24 @@ jobs:
           chmod 600 ~/.ssh/ec2-key.pem
 
           ssh-keyscan -H "$EC2_HOST" >> ~/.ssh/known_hosts
+      - name: Validar chave SSH
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
+        run: |
+          mkdir -p ~/.ssh
+
+          printf '%s\n' "$SSH_PRIVATE_KEY" > ~/.ssh/ec2-key.pem
+          chmod 600 ~/.ssh/ec2-key.pem
+
+          echo "Primeira linha:"
+          head -n 1 ~/.ssh/ec2-key.pem
+
+          echo "Última linha:"
+          tail -n 1 ~/.ssh/ec2-key.pem
+
+          ssh-keygen -y -f ~/.ssh/ec2-key.pem > /dev/null
+
+          echo "Chave válida!"
       - name: Update EC2 VM
         env:
           EC2_HOST: ${{ secrets.EC2_HOST }}
