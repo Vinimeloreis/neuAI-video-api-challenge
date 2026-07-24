@@ -13,7 +13,7 @@ A solução foi estruturada seguindo uma Clean Architecture simplificada e inspi
 
 ## Tecnologias usadas
 
-ASP.NET Core 8.0 para backend, Redis para integração com o database, Docker para containerização da aplicação e biblioteca `commitizen` para padronizar os commits de forma interativa, seguindo os padrões dos conventional commits.
+ASP.NET Core 8.0 para backend, Redis para integração com o database, Docker para containerização da aplicação e biblioteca `commitizen` para padronizar os commits de forma interativa, seguindo os padrões dos conventional commits, e um serviço de health mapeado para o endpoint "/health".
 
 ## Arquitetura / estrutura do projeto
 
